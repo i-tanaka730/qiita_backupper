@@ -8,9 +8,11 @@ It is a tool to back up the article of the specified account.
 
 ## Requirement
 
-- Windows7+
-- Python3.X
-- requests
+- Python3.X (https://www.python.org/downloads/windows/)
+- Requests (Python libraries)
+```sh
+pip install requests
+```
 
 ## Usage
 
