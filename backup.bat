@@ -1,4 +1,4 @@
 @echo off
-set /P ACCOUNT="バックアップ対象のQiitaアカウント名を入力してください: "
+set /P ACCOUNT="Please enter the Qiita account to be back up: "
 python qiita_backupper.py %ACCOUNT%
 pause
