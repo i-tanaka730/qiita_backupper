@@ -7,9 +7,9 @@ import requests
 import re
 
 # レスポンスチェック
-def check_response(res):
+def check_response(response):
     try:
-        res.raise_for_status()
+        response.raise_for_status()
     except Exception as exc:
         print('Error : {}'.format(exc))
         sys.exit(1)
@@ -21,7 +21,7 @@ def make_backup_dir():
 
 # 保存
 def save(item):
-    title = replace_file_name(item["title"])
+    title = exclude_unavailable_filename(item["title"])
     body  = item['body'].encode('utf-8')
     filename = '{0}.md'.format(title)
     fullpath = os.path.join(BUCKUP_DIR, filename)
@@ -32,7 +32,7 @@ def save(item):
     print ('[OK!] ' + filename)
 
 # ファイル名に使用できない文字を除外
-def replace_file_name(name):
+def exclude_unavailable_filename(name):
     return re.sub(r'[\\|/|:|?|.|"|<|>|\|]', '', name)
 
 # バックアップするQiitaアカウントのURL
