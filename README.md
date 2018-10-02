@@ -4,8 +4,6 @@
 
 It is a tool to back up the article of the specified account.
 
-## Demo
-
 ## Requirement
 
 - Python3.X
