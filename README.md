@@ -20,6 +20,7 @@ pip install requests
 git clone https://github.com/i-tanaka730/qiita_backupper
 cd qiita_backupper
 backup.bat
+Please enter the Qiita account to be backed up:<account name>
 ```
 
 ## License
