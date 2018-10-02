@@ -21,6 +21,9 @@ git clone https://github.com/i-tanaka730/qiita_backupper
 cd qiita_backupper
 backup.bat
 Please enter the Qiita account to be back up:<account name>
+[OK!] AAAAA.md
+[OK!] BBBBB.md
+[OK!] CCCCC.md
 ```
 
 ## License
