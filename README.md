@@ -14,14 +14,32 @@ pip install requests
 
 ## Usage
 
+#### 1. git clone
 ```sh
 git clone https://github.com/i-tanaka730/qiita_backupper
-cd qiita_backupper
+```
+
+#### 2. Edit backup.bat
+Please edit ACCOUNT and FORMAT.
+```sh
+@echo off
+
+rem Qiita account name
+set ACCOUNT=i-tanaka730
+
+rem Output format (all / md / html)
+set FORMAT=all
+
+python qiita_backupper.py %ACCOUNT% %FORMAT%
+pause
+```
+
+#### 3. Run backup.bat
+```sh
 backup.bat
-Please enter the Qiita account to be back up:<account name>
-[OK!] AAAAA.md
-[OK!] BBBBB.md
-[OK!] CCCCC.md
+[OK!] AAAAA
+[OK!] BBBBB
+[OK!] CCCCC
 ```
 
 ## License
