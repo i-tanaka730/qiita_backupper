@@ -14,7 +14,7 @@ pip install requests
 
 ## Usage
 
-#### 1. git clone
+#### 1. Git clone
 ```sh
 git clone https://github.com/i-tanaka730/qiita_backupper
 ```
