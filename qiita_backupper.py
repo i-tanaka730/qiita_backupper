@@ -69,13 +69,18 @@ ACCOUNT = sys.argv[1]
 FORMAT = sys.argv[2]
 # バックアップするQiitaアカウントのURL
 QIITA_ACCOUNT_URL = 'https://qiita.com/api/v2/users/' + ACCOUNT + '/items'
+# バックアップ件数
+QIITA_PARAMS = {
+    'page'     : 1,
+    'per_page' : 100,
+}
 # バックアップ先のフォルダのパス
 BUCKUP_DIR = os.path.abspath(os.path.dirname(__file__)) + '/backup'
 # markdownをhtmlに変換するGitHubApiのURL
 HTML_CONVERT_URL = 'https://api.github.com/markdown/raw'
 
 check_format()
-response = requests.get(QIITA_ACCOUNT_URL)
+response = requests.get(QIITA_ACCOUNT_URL, params=QIITA_PARAMS)
 check_response(response)
 make_backup_dir()
 items = response.json()
