@@ -12,7 +12,7 @@ It is a tool to back up the article of the specified account.
 pip install requests
 ```
 
-## Usage
+## Usage(Windows)
 
 #### 1. Git clone
 ```sh
@@ -41,6 +41,26 @@ backup.bat
 [OK!] BBBBB
 [OK!] CCCCC
 ```
+
+## Usage(macOS, Linux)
+
+#### 1. Git clone
+```sh
+git clone https://github.com/i-tanaka730/qiita_backupper
+```
+
+#### 2. Run bachup.sh
+```sh
+$ ./backup.sh $ACCOUNT_NAME $FORMAT
+[OK!] AAAAA
+[OK!] BBBBB
+[OK!] CCCCC
+```
+
+|Arguments|Details|
+|:---:|:---|
+|$USER_NAME|Your account neme of Qiita|
+|$FORMAT|all / md / html|
 
 ## License
 [MIT](https://github.com/i-tanaka730/qiita_backupper/blob/master/LICENSE)
